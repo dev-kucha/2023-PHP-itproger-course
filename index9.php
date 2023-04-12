@@ -16,10 +16,10 @@
 
     echo "<br>";
 
-    $i = 1; // Создание переменной
-    while ($i <= 10) { // Здесь только условие
+    $i = 1; // Створення змінної
+    while ($i <= 10) { // Тільки умова
         echo $i . ",";
-        $i++; // Увеличение переменной
+        $i++; // Збільшення змінної
     }
 
     echo "<br>";
@@ -29,6 +29,34 @@
         $x--;
         echo $x . ",";
     } while ($x > 10);
+
+    echo "<br>";
+
+    // Оператори в циклах
+    for ($el = 100; $el > 10; $el /= 2) {
+        if ($el < 15)
+            break;
+
+        if ($el % 2 == 0)
+            continue;
+
+        echo $el . "<br>";
+    }
+
+    $list = [5, 7, 3, 8, "some", 45.7];
+
+    for ($i = 0; $i < count($list); $i += 1) {
+        echo "Element $i: $list[$i]" . "<br>";
+    }
+
+    echo "<br>";
+
+    $asList = ["age" => 45, "name" => "Alex", "hobby" => "football"];
+
+    foreach ($asList as $item => $value) {
+        echo "Key: $item, Value: $value <br>";
+    }
+
     ?>
 
 </body>
